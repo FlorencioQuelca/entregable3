@@ -11,3 +11,32 @@
     flex-wrap: wrap;
     padding-bottom: 50px;
 }
+
+.location-container {
+    height: 50px;
+    margin-bottom: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.App-head {
+    height: 320px;
+    background-image: url('../public/head.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App__title {
+    color: azure;
+    font-weight: bolder;
+    font-size: 100px;
+    text-shadow: 7px 4px 5px blue;
+}
+
+.Error {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}

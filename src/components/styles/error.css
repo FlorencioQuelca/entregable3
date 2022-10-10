@@ -1,0 +1,13 @@
+.error {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error__title {
+    text-align: center;
+    background-color: deeppink;
+}

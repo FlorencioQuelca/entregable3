@@ -7,9 +7,7 @@ import Error from './components/Error';
 import FilterList from './components/FilterList';
 import Location from './components/Location';
 import getRandomNumber from './utils/GetRandomNumber';
-
-
-
+import './components/styles/formsearch.css'
 function App() {
   
   //  const random =getRandomNumber()
@@ -49,24 +47,35 @@ const handleChance =(e)=>{
 }
 return (
     <div className="App">
-     <h1>Rick and Morty</h1>
-       <form onSubmit={handleSubmit}>
-           <input 
+      <div className='App-head'>
+        <h1  className='App__title'>Rick and Morty</h1>
+      </div>
+      
+       <form className='form-container' onSubmit={handleSubmit}>
+           <input  className='form__input'
            placeholder='Enter another number from 1 to 126' 
            type="text" 
            id ='idlocation'
            onChange={handleChance}/>
-           <button>Search</button>
+           <button className='form__btn'>Search</button>
+           <div className='form__list'>
            <FilterList
            suggestedList={suggestedList}
            setSearchInput={setSearchInput}
            />
+           </div>
        </form>
-       {
-          hasError ? <Error/>
+        {
+          hasError ?
+           <div className='Error'>
+          
+             <Error/>
+           </div>
           :
-          < >
-       <Location location={location}/>
+          <>
+         <div className='location-container'> 
+         <Location  location={location}/>
+         </div>
        <div className='card-container' >
         {
           location?.residents.map( url =>(

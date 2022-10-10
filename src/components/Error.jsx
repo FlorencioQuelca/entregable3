@@ -1,8 +1,11 @@
 import React from 'react'
-
+import './styles/error.css'
 const Error = () => {
   return (
-    <h1>This location is not found !</h1>
+    <div className='error'>
+     
+       <h1 className='error__title'>This location is not found !</h1>
+    </div>
   )
 }
 

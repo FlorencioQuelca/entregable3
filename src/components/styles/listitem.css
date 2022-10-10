@@ -1,0 +1,23 @@
+.filter__list {
+    background-color: rebeccapurple;
+}
+
+.filter__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: white;
+    transition: transform 200ms ease;
+}
+
+.filter__item:hover {
+    text-decoration: dotted;
+    font-weight: 200;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-color: black;
+    transform: scale(1.1);
+    transition: transform 200ms ease;
+}
