@@ -1,0 +1,77 @@
+    .card {
+        background-color: #062226;
+        color: white;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 12px;
+        overflow: hidden;
+        /* sirve para redondear toda la card*/
+    }
+    
+    .card:hover {
+        transform: scale(0.95);
+    }
+    
+    .card__header {
+        position: relative;
+    }
+    
+    .card__container-status {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 80px;
+        background-color: #062226;
+        padding: 6px;
+        border-radius: 0 10px 10px 0;
+        font-size: 14px;
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+    }
+    
+    .card__circle-status {
+        width: 18px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+    
+    .Dead {
+        background-color: red;
+    }
+    
+    .unknown {
+        background-color: #aaa;
+    }
+    
+    .Alive {
+        background-color: green;
+    }
+    
+    .card__body {
+        padding: 20px;
+    }
+    
+    .card__name {
+        font-weight: 700;
+        font-size: 23px;
+        margin-bottom: 20px;
+    }
+    
+    .card__list {
+        display: grid;
+        gap: 10px;
+    }
+    
+    .card__item {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        font-weight: 500;
+        padding-left: 10px;
+    }
+    
+    .card__span {
+        color: #ccc9;
+        transform: translateX(10px);
+    }

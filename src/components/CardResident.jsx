@@ -1,7 +1,7 @@
 
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import '../styles/cardResident.css'
+import './styles/cardResident.css'
 const CardResident = ({url}) => {
 
 const [resident, setResident] = useState()
@@ -14,20 +14,20 @@ useEffect(() => {
   }
 }, [])
   return (
-    <article className='resident'>
-       <header className='resident__header'>
-          <img src={resident?.image} alt="img" />
-            <div>
-              <div className='circle'></div>
+    <article className='card'>
+       <header className='card__header'>
+          <img className='card__img' src={resident?.image} alt="" />
+            <div className='card__container-status'>
+              <div className={`card__circle-status ${resident?.status}`}></div>
               <span>{resident?.status}</span>
             </div>  
        </header>
-        <section className='resident__section'>
-        <h3 className='resident__title'>title: {resident?.name}</h3>
-        <ul className='resident__ul'>
-        <li className='resident__li'><span className='resident__span'>Sprecie :</span> {resident?.species}</li>
-        <li className='resident__li'><span className='resident__span'>Origin : </span> {resident?.origin.name}</li>
-        <li className='resident__li'><span className='resident__span'>Episodes where appear :</span>{resident?.episode.length}</li>
+        <section className='cart__body'>
+        <h3 className='card__name'>title: {resident?.name}</h3>
+        <ul className='card__list'>
+        <li className='card__item'><span className='card__span'>Sprecie :</span> {resident?.species}</li>
+        <li className='card__item'><span className='card__span'>Origin : </span> {resident?.origin.name}</li>
+        <li className='card__item'><span className='card__span'>Episodes where appear :</span>{resident?.episode.length}</li>
         </ul>
         </section>
     </article>
