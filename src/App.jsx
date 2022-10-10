@@ -6,8 +6,12 @@ import CardResident from './components/CardResident';
 import Error from './components/Error';
 import FilterList from './components/FilterList';
 import Location from './components/Location';
-import getRandomNumber from './utils/GetRandomNumber';
 import './components/styles/formsearch.css'
+
+const getRandomNumber = () => {
+  return Math.floor(Math.random() * 126) + 1
+
+}
 function App() {
   
   //  const random =getRandomNumber()
